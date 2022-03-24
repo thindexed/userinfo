@@ -14,10 +14,10 @@ def userinfo():
         return "user not logged in", 403
      
     return jsonify({
-        "id": request.headers.get('x-role'),
+        "id": request.headers.get('x-mail'),
         "username": request.headers.get('x-given_name')+" "+request.headers.get('x-family_name')   ,
         "email": request.headers.get('x-mail'),
-        "displayName": request.headers.get('given_name'),
+        "displayName": request.headers.get('x-given_name'),
         "role": role
     })
 
