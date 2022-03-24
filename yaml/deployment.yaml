@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: userinfo
-        image: docker.io/freegroup/thindexed-userinfo:0.1.0-1
+        image: docker.io/freegroup/thindexed-userinfo:0.1.0-3
