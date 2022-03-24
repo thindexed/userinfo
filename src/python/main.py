@@ -1,18 +1,13 @@
 import logging
-import json
-import pathlib
 
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 app.logger.setLevel(logging.DEBUG)
 
-print(__package__)
-data_anonym = json.loads(pathlib.Path(__file__).parent.joinpath('permissions-anonym.json').read_text())
-data_user = json.loads(pathlib.Path(__file__).parent.joinpath('permissions-user.json').read_text())
 
-@app.route('/permissions')
-def permissions():
+@app.route('/userinfo')
+def userinfo():
     role = request.headers.get('x-role')   
 
     if role == "anonym":
