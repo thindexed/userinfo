@@ -8,6 +8,7 @@ app.logger.setLevel(logging.DEBUG)
 
 @app.route('/userinfo')
 def userinfo():
+    print(request.headers)
     role = request.headers.get('x-role')   
 
     if role == "anonym":
