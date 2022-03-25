@@ -15,9 +15,10 @@ def userinfo():
      
     return jsonify({
         "id": request.headers.get('x-mail'),
-        "username": request.headers.get('x-given_name')+" "+request.headers.get('x-family_name')   ,
+        "picture": request.headers.get('x-picture'),
+        "username": request.headers.get('x-name'),
         "email": request.headers.get('x-mail'),
-        "displayName": request.headers.get('x-given_name'),
+        "displayName": request.headers.get('x-name'),
         "role": role
     })
 
